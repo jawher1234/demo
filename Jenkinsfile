@@ -4,7 +4,10 @@ pipeline {
         maven 'Maven 3.6.3' 
         jdk 'jdk11' 
     }
-        stage ('Initialize') {
+
+    stages {
+
+                stage ('Initialize') {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
@@ -12,7 +15,6 @@ pipeline {
                 ''' 
             }
         } 
-    stages {
 
         stage('Git Checkout'){
             steps {
