@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+
+        environment {
+           PATH = "/usr/bin/mvn:$PATH"
+    }
  
     stages {
 
@@ -9,10 +14,10 @@ pipeline {
             }
         }
             
-        stage('version'){
+        stage('maven'){
             steps {
 
-               sh 'mvn clean -version'
+               sh "mvn test"
                 
             }
         }
