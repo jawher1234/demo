@@ -16,8 +16,12 @@ pipeline {
                   sh 'mvn version'
                 }
             }
+
+            steps {
+                sh 'mvn -version'
+            }
+        }
         }
 
     }
   
-}
