@@ -9,10 +9,11 @@ pipeline {
             }
         }
 
-        stage('UNIT Testing'){
+
+         stage('Build') {
             steps {
-                withMaven {
-                sh 'mvn -version'
+                container ('maven'){
+                  sh 'mvn version'
                 }
             }
         }
