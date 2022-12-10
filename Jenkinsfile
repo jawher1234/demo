@@ -8,9 +8,9 @@ pipeline {
                git branch: 'main', url: 'https://github.com/jawher1234/demo.git'
             }
         }
-
-
-         stage('Build') {
+        
+        
+        stage('Build') {
             steps {
                 container ('maven'){
                   sh 'mvn version'
@@ -24,4 +24,3 @@ pipeline {
         }
 
     }
-  
