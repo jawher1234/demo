@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label "maven"}
  
     stages {
 
@@ -9,11 +9,11 @@ pipeline {
             }
         }
             
-        stage('UNIT Testing'){
+        stage('version'){
             steps {
-                withMaven {
-                sh 'mvn -version'
-                }
+               
+                sh "mvn --version"
+                
             }
         }
 
