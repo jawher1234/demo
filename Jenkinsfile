@@ -11,7 +11,8 @@ pipeline {
             
         stage('version'){
             steps {
-               def mvnHome = tool name: 'Apache Maven 3.6.3', type: 'maven'
+                
+               def mvnHome = tool name: 'maven 3.6.3', type: 'maven'
                sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
                 
             }
