@@ -7,10 +7,11 @@ pipeline {
             steps {
                git branch: 'main', url: 'https://github.com/jawher1234/demo.git'
             }
+        }
 
-        stage('Maven version'){
+        stage('UNIT Testing'){
             steps {
-                sh "mvn -version"
+                sh "mvn test"
             }
         }
 
