@@ -1,12 +1,7 @@
 pipeline {
 agent {label "maven"}
-     
-      tools {
-    maven 'maven'
-  }
-     
-     
-         environment {
+          
+        environment {
         registryCredential = 'dockerHub'
         registry = "faroukfarouk/tpachatproject:1.0"
     }
