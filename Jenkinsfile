@@ -1,11 +1,6 @@
 pipeline {
 agent any
           
-        environment {
-        registryCredential = 'dockerHub'
-        registry = "faroukfarouk/tpachatproject:1.0"
-    }
-
      stages {
           
        stage('Build') {
