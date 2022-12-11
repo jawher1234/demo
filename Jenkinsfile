@@ -10,7 +10,7 @@ agent any
           
        stage('Build') {
            steps {
-             sh "mvn install"
+             sh "gi --version"
                  //sh "mvn compile"
             }
         }
