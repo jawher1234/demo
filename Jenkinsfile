@@ -1,5 +1,5 @@
 pipeline {
-agent {label "maven"}
+agent any
           
         environment {
         registryCredential = 'dockerHub'
